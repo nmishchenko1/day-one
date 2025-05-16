@@ -12,7 +12,6 @@
     padding: 20px;
   }
   
-  /* Navigation Styling */
   .custom-nav {
     background-color: #fff;
     display: flex;
@@ -37,11 +36,8 @@
     border-radius: 4px;
   }
   
-  /* Hero Section */
   .hero {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     gap: 20px;
     background-color: #111;
@@ -49,90 +45,110 @@
     border-radius: 10px;
     margin: 30px auto;
     max-width: 1100px;
+    height: 320px; 
   }
   
   .hero-text {
-    flex: 1 1 48%;
+    flex: 1 1 50%;
+    max-height: 320px;
+    overflow-y: auto;
   }
   
   .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem; 
+    font-weight: bold;
   }
   
   .hero-text p {
     font-size: 1.1rem;
+    line-height: 1.4;
+    max-height: 260px;
+    overflow-y: auto;
   }
   
   .hero-image {
-    flex: 1 1 48%;
+    flex: 1 1 50%;
     text-align: right;
+    max-height: 320px;
   }
   
   .hero-image img {
-    max-width: 100%;
+    max-height: 320px;
+    width: auto;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    object-fit: cover;
   }
   
-  /* Content Grid */
   .content-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
     margin-top: 40px;
-    justify-content: center;
+    width: 100vw;  
+    padding: 0 10px; 
+    box-sizing: border-box;
+    overflow: visible;
   }
   
   .content-grid section {
-    flex: 1 1 280px;
-    padding: 20px;
+    flex: 1 1 0;
+    padding: 15px;
     border-radius: 10px;
-    min-height: 320px;
-    background-size: cover;
-    background-position: center;
     font-size: 1rem;
+    font-family: Arial, sans-serif;
     color: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: none;
+    width: calc((100% - 40px) / 5); 
+    height: 320px;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
   
-  /* Individual Box Styles */
   .em {
-    background-image: url('../images/water7.jpg');
-    border: 4px solid #FFA500; 
-    outline: 2px dotted #FFA500;
+    border: 3px dotted #FFA500;
+    outline: 2px dashed #FFA500;
   }
   
   .rem {
-    background-image: url('../images/water2.jpg');
-    border: 4px dashed #DC143C; 
-    outline: 2px solid #DC143C;
+    border: 3px solid #DC143C;
+    outline: 2px dotted #DC143C;
   }
   
   .percentage {
-    background-image: url('../images/water3.jpg');
-    border: 6px double #3CB371; 
-    outline: 2px dotted #3CB371;
+    border: 3px dashed #3CB371;
+    outline: 2px solid #3CB371;
   }
   
   .box {
-    background-image: url('../images/water9.jpg');
-    border: 4px solid #1E90FF; 
-    outline: 2px solid #1E90FF;
+    border: 3px solid #1E90FF;
+    outline: 3px solid #1E90FF;
   }
   
   .vw {
-    background-image: url('../images/water5.jpg');
-    border: 4px dotted #00BFFF; 
+    border: 3px dotted #00BFFF;
     outline: 2px dashed #00BFFF;
   }
   
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 60px;
+  .content-grid section h3 {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
   }
+  
+  .site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 0.9rem;
+    margin-top: 3em;
+    width: 100%;
+  }
+  
   
