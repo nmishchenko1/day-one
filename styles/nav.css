@@ -1,0 +1,32 @@
+.navbar {
+  background-color: white;
+  padding: 10px 0;
+  border-bottom: 3px solid black;
+  overflow-x: auto;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-list a:hover {
+  background-color: black;
+  color: white;
+}
