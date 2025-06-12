@@ -59,11 +59,7 @@
        <p class="item10">wa authentic</p>
     </footer>
     <script>
-      const pathToNav = window.location.pathname.includes('/pages/')
-        ? 'nav.html'
-        : 'pages/nav.html';
-    
-      fetch(pathToNav)
+     fetch('nav.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('nav-placeholder').innerHTML = data;
