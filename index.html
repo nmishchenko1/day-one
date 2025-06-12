@@ -21,8 +21,12 @@
 <p>An artist who inspires me is Hayao Miyazaki. Although he is known as an animator, I admire the way he builds detailed worlds and emotional stories through visual art. His work reminds me that design can create deep connections with people.</p>
 <h3>What is your favorite color? </h3>
 <p style="color: #d8b4f8;">My favorite color is #d8b4f8.</p>
+<!-- ... -->
 <script>
-	fetch('pages/nav.html')
+	const pathToNav = window.location.pathname.includes('/pages/')
+	  ? 'pages/nav.html'
+	  : 'pages/nav.html'; // тоже pages/nav.html, потому что index.html лежит в корне
+	fetch(pathToNav)
 	  .then(response => response.text())
 	  .then(data => {
 		document.getElementById('nav-placeholder').innerHTML = data;
