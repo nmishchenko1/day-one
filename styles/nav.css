@@ -19,19 +19,19 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow-x: auto; /* ✅ добавлено */
 }
 
 .nav-list {
-  display: flex;
+  display: inline-flex; /* ✅ меняем на inline-flex */
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 40px;
-  max-width: 1400px;
-  overflow-x: auto;
   white-space: nowrap;
+  min-width: max-content; /* ✅ это важно, чтобы всё шло в одну линию */
 }
 
 .nav-list li a {
@@ -42,14 +42,10 @@ body {
   padding: 10px 14px;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
 }
 
 .nav-list li a:hover {
   background-color: #444;
   color: #fff;
-}
-
-.nav-list .spacer {
-  flex: 1;
-  pointer-events: none;
 }

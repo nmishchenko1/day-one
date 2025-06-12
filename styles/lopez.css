@@ -156,4 +156,24 @@
         margin: 0;
       }
 
+      .grid-layout {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "hero hero hero"
+          "item1 item1 item1"
+          "lodging item3 item3"
+          "dining item5 item5"
+          "activities item7 item7";
+      }
       
+      .hero-orcas { grid-area: hero; }
+      .item1 { grid-area: item1; }
+      .lodging { grid-area: lodging; }
+      .item3 { grid-area: item3; }
+      .dining { grid-area: dining; }
+      .item5 { grid-area: item5; }
+      .activities { grid-area: activities; }
+      .item7 { grid-area: item7; }

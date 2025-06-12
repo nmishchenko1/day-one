@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lopez Island</title>
+  <link href="../styles/nav.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/mobile.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/lopez.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <header class="header-grid">
+    <div class="header-item">
+      <a href="../index.html" target="_blank">go to home</a>
+    </div>
+    <div class="header-item logo-container">
+      <img src="../images/sj-066.png" alt="San Juan Islands Logo" class="logo1" />
+    </div>
+    <div class="header-item">
+      <a href="https://www.visitsanjuans.com/itineraries/orcas-island-scenic-byway" target="_blank">search</a>
+    </div>
+  </header>
+
+  <main class="grid-layout">
+    <section class="hero-orcas">
+      <h1>lopez island</h1>
+    </section>
+
+    <section class="item1"></section>
+
+    <section class="item2 lodging">
+      <div class="island-text">
+        <h2>Lodging</h2>
+        <p>Find lodging on Orcas Island. From cozy cabins to resorts, Orcas has something for everyone!</p>
+      </div>
+      <div class="pic2"></div>
+    </section>
+
+    <section class="item3"></section>
+
+    <section class="item4 dining">
+      <div class="island-text">
+        <h2>Dining</h2>
+        <p>Find dining options to start or end your perfect day!</p>
+      </div>
+      <div class="pic4"></div>
+    </section>
+
+    <section class="item5"></section>
+
+    <section class="item6 activities">
+      <div class="island-text">
+        <h2>Activities</h2>
+        <p>Looking for activities on Orcas Island?<br>Find everything from whale and wildlife tours and kayaking.</p>
+      </div>
+      <div class="pic6"></div>
+    </section>
+
+    <section class="item7"></section>
+  </main>
+
+  <footer>
+    <p class="item8">san juan expedition</p><br />
+    <p class="item10">wa authentic</p>
+  </footer>
+
+  <script>
+    const pathToNav = window.location.pathname.includes('/pages/')
+      ? '../pages/nav.html'
+      : 'pages/nav.html';
+
+    fetch(pathToNav)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
