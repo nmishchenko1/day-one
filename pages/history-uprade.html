@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>History of the Internet - briefly nadeen</title>
+  <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
   <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../styles/nav.css">
   <link href="../styles/history.css" rel="stylesheet" type="text/css">
@@ -14,6 +16,7 @@
 </head>
 <body>
   <div id="nav-placeholder"></div>
+
   <main>
     <section>
       <p><b>Dwight Eisenhower</b> - American politician and Army general who served as the 34th President of the United States from 1953 until 1961.</p>
@@ -87,5 +90,14 @@
         });
       });
   </script>
+<script>
+  const pathToNav = window.location.pathname.includes('/pages/') ? 'nav.html' : 'pages/nav.html';
+
+  fetch(pathToNav)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 </body>
 </html>

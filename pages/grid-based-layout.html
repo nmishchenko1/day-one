@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grid Based Layout</title>
+  <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
   <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" />
   <link rel="stylesheet" href="../styles/grid-based-layout.css" />
 </head>
 <body>
+  <div id="nav-placeholder"></div>
+
 
   <header class="pure-u-1 site-header">
     <h1>Nadeen Mishchenko</h1>
@@ -58,6 +62,12 @@
   <footer class="pure-u-1 site-footer">
     <p>EvCC | Spring 2025 | Nadeen Mishchenko</p>
   </footer>
-
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

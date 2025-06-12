@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Optimizing Images</title>
+    <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
     <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="../styles/optimizing-images.css" rel="stylesheet" type="text/css">
@@ -10,16 +12,9 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="theatre-2.html">Theatry Bill</a></li>
-            <li><a href="history-uprade.html">History</a></li>
-            <li><a href="stew recipe.html">Stew Recipe</a></li>
-            <li><a href="cascadeproject.html">Cadcades</a></li>
-            <li><a href="optimizing-images.html">Images</a></li>
-        </ul>
-    </nav>
+    <div id="nav-placeholder"></div>
+
+    
 
     <h1>Optimizing Images</h1>
 
@@ -76,5 +71,12 @@
         <img src="../images/09.jpg" alt="Sample image 9">
         <img src="../images/10.jpg" alt="Sample image 10">
     </article>
+    <script>
+        fetch('nav.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+          });
+      </script>
 </body>
 </html>

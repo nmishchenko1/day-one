@@ -4,28 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cascade Mountains</title>
+  <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
   <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
   <link href="../styles/cascade.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@332&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap" rel="stylesheet">
-  <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
 </head>
 <script>
  
 </script>
 <body>
+  <div id="nav-placeholder"></div>
+
   <article class="container">
     <header>
       <h1>The Cascade Mountain Range</h1>
       <h2>Hiking and Camping Resources</h2>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">Trails</a></li>
-          <li><a href="#">Camping</a></li>
-          <li><a href="#">Maps</a></li>
-          <li><a href="#">Products</a></li>
-        </ul>
-      </nav>
+    
     </header>
 
     <section class="content">
@@ -78,5 +73,12 @@
       </p>
     </footer>
   </article>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

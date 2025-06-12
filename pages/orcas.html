@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orcas Island</title>
+        <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
     <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
     <link href="../styles/islands.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="nav-placeholder"></div>
+
     <header class="header-grid">
         <div class="header-item">
           <a href="../index.html" target="_blank">go to home</a>
@@ -25,13 +29,7 @@
             <div class="hero-orcas">
         <h1>orcas islands</h1>
       </div>
-    <nav>
-        <ul>
-            <li><a href="orcas.html">ORCAS ISLAND</a></li>
-            <li><a href="sanjuan.html">SAN JUAN ISLAND</a></li>
-            <li><a href="lopez.html">LOPEZ ISLAND</a></li>
-          </ul>
-    </nav>
+    
     <main>
         
         <section class="item1">large image</section>
@@ -60,6 +58,14 @@
         <p class="item8">san juan expedition</p> <br>
        <p class="item10">wa authentic</p>
     </footer>
-
+    <script>
+      const pathToNav = window.location.pathname.includes('/pages/') ? 'nav.html' : 'pages/nav.html';
+    
+      fetch(pathToNav)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

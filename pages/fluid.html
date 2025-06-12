@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fluid Dimensions</title>
+  <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+
   <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
   <link
     rel="stylesheet"
@@ -14,17 +16,9 @@
   <link href="../styles/fluid.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <header>
-    <nav class="custom-nav">
-      <a href="../index.html">Home</a>
-      <a href="history-uprade.html">History of the Internet</a>
-      <a href="theatre-2.html">Theater Bill</a>
-      <a href="stew-recipe.html">Stew Recipe</a>
-      <a href="optimizing-images.html">Optimizing Images</a>
-      <a href="cascadeproject.html">Cascade Mountains</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="nav-placeholder"></div>
+
+ 
 
   <main>
     <section class="hero">
@@ -106,6 +100,12 @@
   <footer class="site-footer">
     <p>Nadeen Mishchenko – EvCC – Spring 2025 - GRAPH 130</p>
   </footer>  
-  
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

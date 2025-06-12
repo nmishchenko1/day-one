@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Graph 130 - Nadeen Mishchenko</title>
+		<link href="styles/nav.css" rel="stylesheet">
 		<link href="../styles/mobile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		
+		<div id="nav-placeholder"></div>
+
 <h1>Nadeen Mishchenko</h1>
 <h2>Everett Community College - Graph 130</h2>
 <h3>How many quarters have you attended EvCC?</h3>
@@ -19,5 +21,11 @@
 <p>An artist who inspires me is Hayao Miyazaki. Although he is known as an animator, I admire the way he builds detailed worlds and emotional stories through visual art. His work reminds me that design can create deep connections with people.</p>
 <h3>What is your favorite color? </h3>
 <p style="color: #d8b4f8;">My favorite color is #d8b4f8.</p>
-	</body>
+<script>
+fetch('pages/nav.html')
+.then(response => response.text())
+	  .then(data => {
+		document.getElementById('nav-placeholder').innerHTML = data;
+	  });
+  </script>
 </html>
