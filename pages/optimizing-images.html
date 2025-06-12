@@ -72,7 +72,11 @@
         <img src="../images/10.jpg" alt="Sample image 10">
     </article>
     <script>
-        fetch('nav.html')
+        const pathToNav = window.location.pathname.includes('/pages/')
+          ? 'nav.html'
+          : 'pages/nav.html';
+      
+        fetch(pathToNav)
           .then(response => response.text())
           .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
