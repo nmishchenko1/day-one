@@ -23,7 +23,6 @@ body {
   color: #2c2c2c;
 }
 
-/* Меню */
 .nav-list {
   display: flex;
   gap: 16px;
@@ -48,7 +47,6 @@ body {
   color: #fff;
 }
 
-/* Гамбургер */
 .toggle-button {
   display: none;
   flex-direction: column;
@@ -64,16 +62,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
   .nav-list {
     display: none;
     flex-direction: column;
     width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-button {
-      display: flex;
-    }
   }
 
   .nav-list.active {

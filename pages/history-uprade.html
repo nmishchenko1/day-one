@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>History of the Internet - briefly nadeen</title>
-  <link href="../styles/nav.css" rel="stylesheet" type="text/css">
+  <link href="../styles/nav.css" rel="stylesheet" />
+<link href="../styles/mobile.css" rel="stylesheet" />
 
-  <link href="../styles/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../styles/nav.css">
   <link href="../styles/history.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,20 +92,16 @@
   </script>
 <!-- ... -->
 <script>
-  const pathToNav = window.location.pathname.includes('/pages/')
-    ? '../pages/nav.html'
-    : 'pages/nav.html';
-
-  fetch(pathToNav)
+  fetch("../pages/nav.html")
     .then(response => response.text())
     .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
+      document.getElementById("nav-placeholder").innerHTML = data;
 
-      const script = document.createElement('script');
-      script.src = '../scrips/mobile-nav-2.js';
+      const script = document.createElement("script");
+      script.src = "../scrips/mobile-nav-2.js";
       script.onload = () => {
-        if (typeof initNavToggle === 'function') {
-          initNavToggle(); // Вызов после загрузки скрипта
+        if (typeof initNavToggle === "function") {
+          initNavToggle();
         }
       };
       document.body.appendChild(script);
