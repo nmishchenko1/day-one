@@ -1,51 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-.navbar, .nav-list, .nav-list li a {
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ebebeb;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  padding: 18px 0;
-  margin-bottom: 28px;
-  border-bottom: 1px solid #d0d0d0;
+  padding: 12px 24px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  overflow-x: auto; /* ✅ добавлено */
+  flex-wrap: wrap;
 }
 
+.brand-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+/* Меню */
 .nav-list {
-  display: inline-flex; /* ✅ меняем на inline-flex */
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 24px;
+  display: flex;
+  gap: 16px;
   list-style: none;
   margin: 0;
-  padding: 0 40px;
-  white-space: nowrap;
-  min-width: max-content; /* ✅ это важно, чтобы всё шло в одну линию */
+  padding: 0;
+  align-items: center;
 }
 
 .nav-list li a {
-  color: #2c2c2c;
   text-decoration: none;
-  font-size: 15px;
+  color: #2c2c2c;
+  font-size: 14px;
   font-weight: 500;
-  padding: 10px 14px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  display: inline-block;
 }
 
 .nav-list li a:hover {
   background-color: #444;
   color: #fff;
+}
+
+/* Гамбургер */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.toggle-button .bar {
+  width: 22px;
+  height: 3px;
+  background-color: #2c2c2c;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-button {
+      display: flex;
+    }
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
 }

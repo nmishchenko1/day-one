@@ -82,7 +82,17 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('nav-placeholder').innerHTML = data;
+  
+        const script = document.createElement('script');
+        script.src = '../scrips/mobile-nav-2.js';
+        script.onload = () => {
+          if (typeof initNavToggle === 'function') {
+            initNavToggle(); // Вызов после загрузки скрипта
+          }
+        };
+        document.body.appendChild(script);
       });
   </script>
-</body>
+
+  </body>
 </html>
