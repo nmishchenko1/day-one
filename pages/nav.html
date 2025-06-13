@@ -1,23 +1,49 @@
-<nav class="navbar">
-  <div class="brand-title">GRAPH 130</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Preview</title>
+  <link href="../styles/nav.css" rel="stylesheet">
+  <link href="../styles/mobile.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
 
-  <div class="toggle-button" role="button" aria-label="Toggle menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
+  <nav class="navbar">
+    <div class="brand-title">GRAPH 130</div>
+  
+    <div class="toggle-button" role="button" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  
+    <ul class="nav-list kiwi">
+      <li><a href="/evcc-graph130/index.html">Home</a></li>
+      <li><a href="/evcc-graph130/pages/history-uprade.html">Internet History</a></li>
+      <li><a href="/evcc-graph130/pages/theatre-2.html">Theater Bill</a></li>
+      <li><a href="/evcc-graph130/pages/stew-recipe.html">Stew Recipe</a></li>
+      <li><a href="/evcc-graph130/pages/optimizing-images.html">Optimize Images</a></li>
+      <li><a href="/evcc-graph130/pages/cascadeproject.html">Cascades</a></li>
+      <li><a href="/evcc-graph130/pages/fluid.html">Fluid Design</a></li>
+      <li><a href="/evcc-graph130/pages/orcas.html">Orcas</a></li>
+      <li><a href="/evcc-graph130/pages/media-queries.html">Media Queries</a></li>
+      <li><a href="/evcc-graph130/pages/grid-based-layout.html">Grid Layout</a></li>
+      <li><a href="/evcc-graph130/pages/lopez.html">Lopez</a></li>
+    </ul>
+  </nav>
 
-  <ul class="nav-list kiwi">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="history-uprade.html">Internet History</a></li>
-    <li><a href="theatre-2.html">Theater Bill</a></li>
-    <li><a href="stew-recipe.html">Stew Recipe</a></li>
-    <li><a href="optimizing-images.html">Optimize Images</a></li>
-    <li><a href="cascadeproject.html">Cascades</a></li>
-    <li><a href="fluid.html">Fluid Design</a></li>
-    <li><a href="orcas.html">Orcas</a></li>
-    <li><a href="media-queries.html">Media Queries</a></li>
-    <li><a href="grid-based-layout.html">Grid Layout</a></li>
-    <li><a href="lopez.html">Lopez</a></li>
-  </ul>
-</nav>
+<script src="../scrips/mobile-nav-2.js"></script>
+<script>
+  if (typeof initNavToggle === "function") {
+    initNavToggle();
+  }
+</script>
+
+</body>
+</html>
